@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://www.gstatic.com/lamda/images/sparkle_resting_v2_darkmode_2bdb7df2724e450073ede.gif" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Clon - Bard</title>
+</head>
+
+<body>
+    <!-- Barra de Navegacion -->
+    <nav>
+        <!-- Caja izquierda -->
+        <div class="filaCajaNav">
+            <span id="menu" class="material-symbols-outlined">
+                menu
+            </span>
+            <p id="logo">Bard <span>Experiment</span></p>
+        </div>
+
+        <!-- Caja derecha -->
+        <div class="filaCajaNav2">
+            <span id="apps" class="material-symbols-outlined">
+                apps
+            </span>
+            <img id="perfil" src="img/273163353_4889137774489260_4767137278190647294_n.jpg" alt="Perfil">
+        </div>
+    </nav>
+
+    <!-- Contenido -->
+    <main>
+        <!-- Menu Lateral -->
+        <aside>
+            <!-- Bloque superior -->
+            <div class="asideCajaSuperior">
+                <div id="disable" class="asideCajaSuperior_Fila">
+                    <span class="material-symbols-outlined">
+                        restart_alt
+                    </span>
+                    <p>Reset chat</p>
+                </div>
+        
+                <div class="asideCajaSuperior_Fila">
+                    <span class="material-symbols-outlined">
+                        history
+                    </span>
+                    <p>Bard Activity</p>
+                </div>
+        
+                <div class="asideCajaSuperior_Fila">
+                    <span class="material-symbols-outlined">
+                        help
+                    </span>
+                    <p>FAQ</p>
+                </div>
+        
+                <div class="asideCajaSuperior_Fila">
+                    <span class="material-symbols-outlined">
+                        event_note
+                    </span>
+                    <p>Updates</p>
+                </div>
+        
+                <div class="asideCajaSuperior_Fila">
+                    <span class="material-symbols-outlined">
+                        sms_failed
+                    </span>
+                    <p>Help</p>
+                </div>
+            </div>
+        
+            <!-- Bloque inferior -->
+            <div>
+                <div id="separador">
+                </div>
+                <div class="asideCajaSuperior_Fila">
+                    <span class="material-symbols-outlined">
+                        light_mode
+                    </span>
+                    <p>Use Light Theme</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Bloque central -->
+        <section class="bloqueCentral">
+            <div class="bloqueCentral_centrar">
+                <!-- Caja superior del bloque central -->
+                <div class="bloqueCentral_centrar_cajaSuperior">
+                    <!-- Bloque de la Izquierda / Icono -->
+                    <div class="bloqueCentral_centrar_cajaSuperior_cajaEstrella">
+                        <img src="https://www.gstatic.com/lamda/images/sparkle_resting_v2_darkmode_2bdb7df2724e450073ede.gif" class="bloqueCentral_centrar_cajaSuperior_cajaEstrella-estrella" id="estrella" alt="Estrella">
+                    </div>
+
+                    <!-- Bloque de la Derecha / Respuesta -->
+                    <div class="bloqueCentral_centrar_cajaSuperior_cajaTexto">
+                        <p class="text">I’m Bard, your creative and helpful collaborator. I have limitations and won’t always get it right, but your feedback will help me improve.</p>
+                        <p class="text">Not sure where to start? You can try:</p>
+                        <a class="text anclas n1" href="">Write some lyrics for a heartbreak anthem titled “Lovesick” </a>
+                        <a class="text anclas n2" href=""> I want to write a novel. How can I get started? </a>
+                        <a class="text anclas n3" href=""> Give me some ideas to surprise my movie-loving friend on their birthday </a>
+                    </div>
+                </div>
+
+                <!-- Caja Inferior del bloque central -->
+                <div class="bloqueCentral_centrar_cajaInferior">
+                    <div class="bloqueCentral_centrar_cajaInferior_cajaBarra">
+                        <div class="bloqueCentral_centrar_cajaInferior_cajaBarra_cajaInput">
+                            <input type="text" placeholder="Enter a prompt here" class="bloqueCentral_centrar_cajaInferior_cajaBarra_cajaInput_input" id="inputFocus">
+                            <i class="fa-solid fa-microphone"></i>
+                        </div>
+                        <span class="material-symbols-outlined send">
+                            send
+                        </span>
+                    </div>
+
+                    <p>Bard may display inaccurate or offensive information that doesn’t represent Google’s views.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>

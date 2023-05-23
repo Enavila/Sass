@@ -1,0 +1,231 @@
+$grisRespuesta: #222327
+$negroRespuesta: #131314
+$azulAnclaHover: #61AEFA
+$azulAnclaNormal: #4096ed 
+$gris: #3b3b3b7d
+$grisHover: #171818
+$bard: #CACBCE
+$experiment: #92ADD9
+$gris2: #5d5c5c
+
+@mixin orientacion($display:flex, $direcion:null, $justify:null, $aling:null, $columns:null, $place:null )
+    display: $display
+    justify-content: $justify
+    flex-direction: $direcion
+    align-items: $aling
+    grid-template-columns:  $columns
+    place-content: $place
+
+*
+    box-sizing: border-box
+    top: 0
+    margin: 0px
+    font-size: 15px
+    color: white
+    font-family: 'Open Sans', sans-serif
+    text-decoration: none
+
+
+body
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: 100vh
+    background-color: #000101
+
+nav
+    display: flex
+    justify-content: space-between
+    padding: 8px 20px 8px 20px
+
+.filaCajaNav
+    @include orientacion(flex, null, null, center )
+    width: 200px
+    gap: 10px
+
+    p
+        @include orientacion(flex, null, center, center )
+        font-size: 1.3rem
+        color: $bard
+        span
+            margin-left: 5px
+            font-size: .7rem
+            border: .5px solid $experiment
+            color: $experiment
+            border-radius: 4px
+            padding: 0px 5px 0px 5px 
+
+
+.filaCajaNav2
+    @include orientacion(flex, null, null, center )
+
+    gap: 10px
+    
+
+#menu
+    @include orientacion(flex , null, center , center )
+    
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    padding: 4px
+
+#menu:hover
+    background-color: $gris
+
+#logo
+    height: 22px
+
+#apps
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    padding: 4px
+
+#apps:hover
+    background-color: $gris
+
+#perfil
+    width: 42px
+    height: 42px
+    border-radius: 50%
+    padding: 4px
+
+#perfil:hover
+    background-color: $gris
+
+// Caja del bloque principal (2 columnas)
+main
+    @include orientacion(grid, null, null, null, 13% 87%)
+    width: 100%
+    height: 100%
+// aside
+aside
+    @include orientacion(flex, column, space-between)
+    width: 100%
+    height: 100%
+    font-weight: 600
+
+#separador
+    width: 100%
+    border-top: 1px solid $gris2
+    margin: 8px 0px 
+    opacity: .7
+.asideCajaSuperior
+    @include orientacion(flex, column)
+    #disable
+        margin-top: 5px
+        p, span
+            color: $gris2
+    &_Fila
+        display: flex
+        width: 100%
+        gap: 16px
+        padding: 17px 40px 17px 22px
+        margin-bottom: 8px
+    &_Fila:hover
+        background-color: $gris
+        border-radius: 0px 30px 30px 0px
+//section
+.bloqueCentral
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    &_centrar
+        width: 76%
+        height: 100%
+        margin-bottom: 20px
+        background: $grisRespuesta
+        @include orientacion(flex, column, space-between, center)
+        border-radius: 25px
+        &_cajaSuperior
+            @include orientacion(grid, null, null, null, 5% 95%)
+            background: $negroRespuesta
+            margin: 16px 25px 0px 15px
+            width: 96.5%
+            height: 26%
+            border-radius: 20px
+            &_cajaEstrella
+                width: 100%
+                @include orientacion(flex, null, center, start)
+                margin-top: 10px
+                &-estrella
+                    width: 55%
+            &_cajaTexto
+                display: flex
+                flex-direction: column
+.text
+    font-size: 1.1rem
+    margin: 10px 0px
+    font-weight: 500
+.anclas
+    color: $azulAnclaNormal
+    border-radius: 7px 
+.anclas:hover
+    color: $azulAnclaHover
+    background: $grisHover
+.n1
+    width: 466px
+.n2
+    width: 360px
+.n3
+    width: 570px
+.bloqueCentral_centrar_cajaInferior
+    @include orientacion(flex, column, null, center)
+    width: 90%
+    height: 80px
+    margin-bottom: 15px
+    &_cajaBarra
+        @include orientacion(flex, null, center, center)
+        width: 100%
+        height: 100%
+        &_cajaInput
+            @include orientacion(flex, null, null, center)
+            width: 100%
+            height: 100%
+            border: 1px 
+            border-radius: 100px
+            padding: 0px 0px
+            margin-right: 10px
+            background: $negroRespuesta
+            position: relative
+            overflow: hidden
+            &_input
+                background: none
+                border: 1px solid
+                border-radius: 100px
+                width: 100%
+                height: 100%
+                padding: 0px 35px
+                outline: 0px
+            &_input:focus
+                border: 2px solid $azulAnclaHover
+.fa-microphone
+    position: absolute 
+    font-size: 1.4rem
+    width: 40px
+    height: 40px
+    right: 20px
+    top: 7px
+    padding: 10px 12px
+    border-radius: 50%
+.fa-microphone:hover
+    background: $gris
+.bloqueCentral_centrar_cajaInferior p
+    font-size: .8rem
+    margin-top: 10px
+    color: #bdbdbd
+.send
+    color: $gris2
+
+
+
+
+
+
+
+
